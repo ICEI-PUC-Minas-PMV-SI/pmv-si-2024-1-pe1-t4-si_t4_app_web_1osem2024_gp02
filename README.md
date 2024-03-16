@@ -1,23 +1,27 @@
-# TÍTULO DO PROJETO
+# SISTEMA DE CONTROLE FINANCEIRO
 
-`CURSO`
+`SISTEMAS DE INFORMAÇÃO`
 
-`DISCIPLINA`
+`EIXO 1 - PROJETO: APLICAÇÕES WEB - TURMA 1`
 
-`SEMESTRE`
+`2024/01`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+A principal meta é criar uma plataforma online para ajudar os indivíduos a gerenciarem suas finanças. A plataforma possibilita que os usuários insiram suas despesas e receitas de maneira personalizada, categorizando-as para uma organização mais eficiente. Além disso, oferece gráficos mensais para uma visualização mais clara dos valores registrados, proporcionando uma experiência visual diferenciada aos usuários.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Daniele Aparecida de Souza
+* Lucas Eduardo Silva Couto
+* Morgana Larissa Rego Santos
+* Rodrigo de Oliveira Ferreira
+* Rodrigo Figueira de Lima
+* Vinícius de Araújo Portela
+* Pedro Henrique Fileti Kuhn
+
 
 ## Orientador
 
-* Nome completo do professor 1
+* Nesley Jesus Daher de Oliveira
 
 ## Instruções de utilização
 
