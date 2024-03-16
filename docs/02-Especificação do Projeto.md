@@ -46,33 +46,24 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|  ID  |                                                   Descrição do Requisito                                                          | Prioridade |
+|------|-----------------------------------------------------------------------------------------------------------------------------------|------------|
+|RF-001| Permitir que o usuário insira suas receitas e despesas na plataforma                                                              |    ALTA    | 
+|RF-002| Garantir que o usuário possa visualizar o saldo resultante de suas operações de forma clara e acessível.                          |    ALTA    | 
+|RF-003| Implementar um sistema que permita ao usuário estabelecer e acompanhar metas de gastos, auxiliando na gestão financeira pessoal.  |    MÉDIA   |
+|RF-004| Desenvolver funcionalidade para gerar relatórios financeiros detalhados, oferecendo uma análise abrangente de suas finanças       |    MÉDIA   |
+|RF-005| Permitir que o usuário utilize categorias pré-estabelecidas para classificar suas transações.                                     |    BAIXA   |
+|RF-006| Incluir gráficos para que o usuário possa visualizar de forma mais clara suas receitas e despesas ao longo do mês.                |    BAIXA   |
+|RF-007| Implementar a capacidade de utilizar IA para analisar relatórios e fornecer insights personalizados aos usuários.                 |    BAIXA   |
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|-------|-------------------------------------------------------------------------------------------------------------------------------|-------|
+|RNF-001| O sistema deve ser compatível com diversos navegadores de internet para garantir uma experiência consistente para os usuários.| ALTA  | 
+|RNF-002| As requisições do usuário devem ser processadas de forma eficiente, mantendo um tempo de resposta adequado para as operações. | MÉDIA | 
+|RNF-003| O sistema deve ser responsivo, adaptando-se de forma adequada para funcionar de maneira eficaz em dispositivos móveis.        | BAIXA | 
 
 ## Restrições
 
