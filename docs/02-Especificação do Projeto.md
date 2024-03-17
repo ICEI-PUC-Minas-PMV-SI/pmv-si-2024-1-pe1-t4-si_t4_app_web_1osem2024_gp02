@@ -47,10 +47,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------------------------------------------------------------------------------------------------|------------|
 |RF-001| Permitir que o usuário insira suas receitas e despesas na plataforma                                                              |    ALTA    | 
 |RF-002| Garantir que o usuário possa visualizar o saldo resultante de suas operações de forma clara e acessível.                          |    ALTA    | 
-|RF-003| Implementar um sistema que permita ao usuário estabelecer e acompanhar metas de gastos, auxiliando na gestão financeira pessoal.  |    MÉDIA   |
+|RF-003| Implementar um sistema que permita ao usuário estabelecer e acompanhar metas de gastos, auxiliando na gestão financeira pessoal.  |    ALTA   |
 |RF-004| Desenvolver funcionalidade para gerar relatórios financeiros detalhados, oferecendo uma análise abrangente de suas finanças       |    MÉDIA   |
-|RF-005| Permitir que o usuário utilize categorias pré-estabelecidas para classificar suas transações.                                     |    BAIXA   |
-|RF-006| Incluir gráficos para que o usuário possa visualizar de forma mais clara suas receitas e despesas ao longo do mês.                |    BAIXA   |
+|RF-005| Permitir que o usuário utilize categorias pré-estabelecidas para classificar suas transações.                                     |    MÉDIA   |
+|RF-006| Incluir gráficos para que o usuário possa visualizar de forma mais clara suas receitas e despesas ao longo do mês.                |    MÉDIA   |
 |RF-007| Implementar a capacidade de utilizar IA para analisar relatórios e fornecer insights personalizados aos usuários.                 |    BAIXA   |
 
 
