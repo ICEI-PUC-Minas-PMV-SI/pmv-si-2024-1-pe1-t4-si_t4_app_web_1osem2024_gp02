@@ -41,7 +41,8 @@ Sendo assim o público-alvo se destina ao perfil de pessoa física, que saiba o 
 
 Diagrama de Personas
 
-
+<img src="img/persona_isabella.jpg"><img src="img/persona_daniel.jpg"><br>
+<img src="img/persona_matheus.jpg"><img src="img/persona_deborah.jpg">
 
 Mapa de Stakeholders
 
