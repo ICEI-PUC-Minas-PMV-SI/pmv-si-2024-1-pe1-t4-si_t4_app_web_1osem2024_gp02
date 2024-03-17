@@ -1,7 +1,5 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
 Esta seção detalha a definição do problema, a ideia de solução a partir da perspectiva do usuário, e estabelece as bases para o desenvolvimento do projeto. Utiliza-se de técnicas de análise e design de experiência do usuário, como a criação de personas e histórias de usuários, para identificar as necessidades e expectativas dos potenciais usuários da solução. Além disso, especifica os requisitos funcionais e não funcionais, e define as restrições sob as quais o projeto deve operar.
 
 ## Personas
