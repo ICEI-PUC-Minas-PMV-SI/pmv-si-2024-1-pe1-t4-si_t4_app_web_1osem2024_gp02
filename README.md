@@ -13,10 +13,11 @@ A principal meta é criar uma plataforma online para ajudar os indivíduos a ger
 * Daniele Aparecida de Souza
 * Lucas Eduardo Silva Couto
 * Morgana Larissa Rego Santos
+* Pedro Henrique Fileti Kuhn
 * Rodrigo de Oliveira Ferreira
 * Rodrigo Figueira de Lima
 * Vinícius de Araújo Portela
-* Pedro Henrique Fileti Kuhn
+
 
 
 ## Orientador

@@ -1,46 +1,44 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Uma pesquisa da Federação do Comércio de Bens, Serviços e Turismo do Estado de São Paulo (FecomercioSP) indica um significativo aumento no endividamento das famílias brasileiras em 2022, atingindo a maior taxa dos últimos 12 anos, com 78% das famílias afetadas. Quase 5 milhões de lares nas capitais tinham contas em atraso. Esse aumento no endividamento é associado à queda de renda e ao uso intenso do crédito, especialmente para compras no varejo, em um contexto de recuperação econômica pós-pandemia. Ademais, a FecomercioSP, responsável pelo estudo, observa que o acesso ao crédito não é negativo por si só, mas destaca a importância de um equilíbrio financeiro sustentável.
+Outra pesquisa realizada pela CNDL e SPC corroboram para esse panorama: em 2023 a inadimplência aumentou 3% em dezembro comparado ao ano passado. Essa pesquisa também traz outro dado interessante, quase metade dos brasileiros de 30 a 39 anos estão endividados, sendo parte majoritária das dívidas advindas de bancos (63,26%) seguidas por água e luz (11,85%).
+
+Referências bibliográficas:
+
+1- https://www.fecomercio.com.br/noticia/endividamento-atinge-78-das-familias-brasileiras-maior-taxa-dos-ultimos-12-anos
+
+2- https://www.cnnbrasil.com.br/economia/macroeconomia/inadimplencia-volta-a-subir-no-brasil-em-ano-de-debates-sobre-juros-e-endividamento/
+
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Como mostrado pela pesquisa da FecomercioSP e da CNDL com a SPC, a questão do endividamento financeiro é crítica. A situação atual reflete não apenas a vulnerabilidade econômica dessas famílias, mas também destaca a necessidade de promover uma gestão financeira mais eficiente e consciente. Além disso, a falta de visibilidade sobre o próprio fluxo de receitas e despesas mensais tem levado muitos ao endividamento, o qual é agravado pelo uso excessivo e muitas vezes mal planejado do crédito.
+Além da falta de visibilidade, o alto percentual de endividados evidencia a falta de educação financeira da população. Essa carência também resulta em uma falta de planejamento que acaba perpetuando a condição de endividamento. A falta de planejamento junto à falta de visibilidade acabam resultando em vários problemas como fazer despesas que vão além da receita ou ainda atrasos que acabam resultando em multas.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Diante disso, nosso projeto tem como objetivo desenvolver uma ferramenta  para o controle de finanças pessoais, oferecendo aos usuários um meio prático e interativo de gerenciar suas receitas e despesas. Esta iniciativa é voltada para indivíduos e famílias que buscam melhorar sua saúde financeira e reduzir o endividamento, aproveitando as facilidades que a tecnologia proporciona.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivos Específicos:
+- Ter uma visão geral sobre minhas despesas e receitas.
+- Prover educação financeira através de conteúdos multimídia.
+- Melhorar controle financeiro através do estabelecimento de orçamentos e metas.
+- Prevenir atrasos por meio de alertas.
+- Melhorar planejamento através de um resumo financeiro.
+
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Como mostrado anteriormente, o endividamento dos brasileiros piora a cada ano. Com isso, torna-se evidente a necessidade de criar uma aplicação que ajude a promover mudanças positivas nos hábitos financeiros, incentivando uma cultura de planejamento e gestão financeira responsável. Ao oferecer uma ferramenta acessível e intuitiva para o controle financeiro, ele responde não só à necessidade de reduzir o endividamento, mas também capacita os usuários a adotarem práticas financeiras mais sustentáveis, contribuindo para a construção de uma base sólida para a saúde financeira pessoal e familiar.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Nossa aplicação tem como foco um público-alvo diversificado, abrangendo desde jovens adultos na faixa de 19 anos de idade, que estão apenas começando sua jornada financeira até adultos de 55 anos de idade que buscam uma melhor gestão e compreensão de seus recursos.
+Buscamos uma experiência para aqueles que têm pouco conhecimento tecnológico ou que não estão familiarizados com termos financeiros complexos, buscando atingir a maior parcela dos brasileiros endividados (23,65%) que se encontram na faixa de 30 a 39 anos de idade conforme a pesquisa realizada pela CNDL e SPC.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Sendo assim o público-alvo se destina ao perfil de pessoa física, que saiba o idioma português brasil e que busque um maior controle de suas finanças.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Diagrama de Personas
+
+Mapa de Stakeholders
