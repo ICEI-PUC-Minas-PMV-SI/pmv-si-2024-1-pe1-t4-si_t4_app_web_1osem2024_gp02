@@ -41,4 +41,8 @@ Sendo assim o público-alvo se destina ao perfil de pessoa física, que saiba o 
 
 Diagrama de Personas
 
+
+
 Mapa de Stakeholders
+
+
