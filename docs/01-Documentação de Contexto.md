@@ -39,7 +39,7 @@ Buscamos uma experiência para aqueles que têm pouco conhecimento tecnológico 
 
 Sendo assim o público-alvo se destina ao perfil de pessoa física, que saiba o idioma português brasil e que busque um maior controle de suas finanças.
 
-Diagrama de Personas
+## Diagrama de Personas
 
 <div style="display: flex; flex-wrap: wrap;">
   <img src="img/persona_isabella.jpg" alt="Isabella">
@@ -51,6 +51,6 @@ Diagrama de Personas
   <img src="img/persona_deborah.jpg" alt="Deborah">
 </div>
 
-Mapa de Stakeholders
+## Mapa de Stakeholders
 
 <img src="img/stakeholder.jpg">
