@@ -41,8 +41,15 @@ Sendo assim o público-alvo se destina ao perfil de pessoa física, que saiba o 
 
 Diagrama de Personas
 
-<img src="img/persona_isabella.jpg"><img src="img/persona_daniel.jpg"><br>
-<img src="img/persona_matheus.jpg"><img src="img/persona_deborah.jpg">
+<div style="display: flex; flex-wrap: wrap;">
+  <img src="img/persona_isabella.jpg" alt="Isabella">
+  <img src="img/persona_daniel.jpg" alt="Daniel">
+</div>
+
+<div style="display: flex; flex-wrap: wrap;">
+ <img src="img/persona_matheus.jpg" alt="Matheus">
+  <img src="img/persona_deborah.jpg" alt="Deborah">
+</div>
 
 Mapa de Stakeholders
 
