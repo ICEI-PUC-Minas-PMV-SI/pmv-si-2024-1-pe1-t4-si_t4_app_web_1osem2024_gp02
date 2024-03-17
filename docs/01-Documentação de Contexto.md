@@ -6,6 +6,7 @@ Outra pesquisa realizada pela CNDL e SPC corroboram para esse panorama: em 2023 
 Referências bibliográficas:
 
 1- https://www.fecomercio.com.br/noticia/endividamento-atinge-78-das-familias-brasileiras-maior-taxa-dos-ultimos-12-anos
+
 2- https://www.cnnbrasil.com.br/economia/macroeconomia/inadimplencia-volta-a-subir-no-brasil-em-ano-de-debates-sobre-juros-e-endividamento/
 
 
