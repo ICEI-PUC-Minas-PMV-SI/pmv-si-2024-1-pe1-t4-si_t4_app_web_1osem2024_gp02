@@ -45,4 +45,4 @@ Diagrama de Personas
 
 Mapa de Stakeholders
 
-
+<img src="img/stakeholder.jpg">
