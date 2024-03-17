@@ -1,6 +1,13 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Uma pesquisa da Federação do Comércio de Bens, Serviços e Turismo do Estado de São Paulo (FecomercioSP) indica um significativo aumento no endividamento das famílias brasileiras em 2022, atingindo a maior taxa dos últimos 12 anos, com 78% das famílias afetadas. Quase 5 milhões de lares nas capitais tinham contas em atraso. Esse aumento no endividamento é associado à queda de renda e ao uso intenso do crédito, especialmente para compras no varejo, em um contexto de recuperação econômica pós-pandemia. Ademais, a FecomercioSP, responsável pelo estudo, observa que o acesso ao crédito não é negativo por si só, mas destaca a importância de um equilíbrio financeiro sustentável.
+Outra pesquisa realizada pela CNDL e SPC corroboram para esse panorama: em 2023 a inadimplência aumentou 3% em dezembro comparado ao ano passado. Essa pesquisa também traz outro dado interessante, quase metade dos brasileiros de 30 a 39 anos estão endividados, sendo parte majoritária das dívidas advindas de bancos (63,26%) seguidas por água e luz (11,85%).
+
+Referências bibliográficas:
+
+1- https://www.fecomercio.com.br/noticia/endividamento-atinge-78-das-familias-brasileiras-maior-taxa-dos-ultimos-12-anos
+2- https://www.cnnbrasil.com.br/economia/macroeconomia/inadimplencia-volta-a-subir-no-brasil-em-ano-de-debates-sobre-juros-e-endividamento/
+
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
