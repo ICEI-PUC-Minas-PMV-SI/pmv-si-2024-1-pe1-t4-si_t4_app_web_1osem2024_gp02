@@ -28,12 +28,12 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |--------------------|------------------------------------|----------------------------------------|
 |Isabella Lima| Registrar minhas despesas informando o valor, objetivo e vencimento.          | Economizar dinheiro                          |
 |Isabella Lima| Verificar a diferença entre receitas e despesas                               | Conseguir dinheiro para comprar um automóvel |
-|Daniel Oliveira| Registrar seus gastos para aprimorar a gestão de seu dinheiro.| Administrar melhor suas finanças visando o pagamento de dívidas. |
+|Daniel Oliveira| Registrar seus gastos para aprimorar a gestão de seu dinheiro.| Administrar melhor as finanças visando o pagamento de dívidas. |
 |Daniel Oliveira| Criar um planejamento financeiro sólido | Garantir segurança financeira e preparação para imprevistos |
-|Matheus Teixeira| Reduzir despesas supérfluas. | Fazer uma reserva financeira e concretizar seu sonho de viajar para o exterior |
-|Matheus Teixeira| Compreender como seu dinheiro está sendo gasto | Aplicar o dinheiro em investimentos |
-|Deborah Silva| Recordar possíveis pagamentos e evitar atrasos em contas | Pagar dívidas e contas em dia para manter sua saúde financeira.|
-|Deborah Silva| Compreender seu balanço financeiro para economizar dinheiro | Realizar uma viagem em família com planejamento financeiro adequado |
+|Matheus Teixeira| Reduzir despesas supérfluas. | Fazer uma reserva financeira e concretizar sonho de viajar para o exterior |
+|Matheus Teixeira| Compreender como o dinheiro está sendo gasto | Aplicar o dinheiro em investimentos |
+|Deborah Silva| Recordar possíveis pagamentos atrasados | Pagar dívidas e contas em dia e manter sua saúde financeira.|
+|Deborah Silva| Compreender o balanço financeiro e economizar dinheiro | Realizar uma viagem em família com planejamento financeiro adequado |
 
 
 
