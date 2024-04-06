@@ -5,10 +5,14 @@ function openNav() {
 document.addEventListener("DOMContentLoaded", function () {
   const aside = document.getElementById("Sidebar");
   const menuButton = document.querySelector(".menu");
+
   // Fechar barra lateral quando clicar fora dela
   window.addEventListener("click", function (event) {
-    if (!aside.contains(event.target) && !menuButton.contains(event.target)) {
-      aside.style.display = "none";
+    // Verificar se a tela é pequena
+    if (window.innerWidth <= 768) {
+      if (!aside.contains(event.target) && !menuButton.contains(event.target)) {
+        aside.style.display = "none";
+      }
     }
   });
 });
