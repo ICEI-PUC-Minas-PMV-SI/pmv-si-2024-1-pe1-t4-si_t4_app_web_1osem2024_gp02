@@ -1,35 +1,41 @@
-
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+As telas foram desenvolvidas no Figma. O design focou em criar uma experiência completa para o usuário final, com uma interface responsiva e intuitiva. Além disso, para ajudar na visualização, foi destacado as transações pagas das não pagas, além de destacar as transações que estão vencidas ou próximas de vencer, ajudando assim a ter uma visibilidade maior sobre as contas.
 
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
+Ademais, foi desenvolvido uma tela para organizar todas as informações relevantes para o usuário como gastos por categoria ou gastos por dia, podendo assim ter um panorama claro de como o dinheiro está sendo gasto.
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+Por fim, foi também desenvolvido uma tela de metas, onde o usuário pode definir sua meta total ou ainda metas específicas por categoria, favorecendo um maior controle sobre suas finanças.
 
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+O usuário começa pela tela de transações
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
-
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
-
+![User Flow](./img/user_flow.png)
 
 ## Wireframes
+Tela de transações
+![Tela de transações](./img/transactions_screen.png)
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Tela de resumo
+![Tela de resumo](./img/brief_screen.png)
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+Tela de metas
+![Tela de metas](./img/goals_screen.png)
+
+Modal Adicionar Despesa
+![Modal adicionar despesa](./img/add_expenses.png)
+
+Modal Adicionar Receita
+![Modal adicionar receita](./img/add_income.png)
+
+Modal Confirmar remoção
+![Modal confirmar remoção](./img/confirm_remove.png)
+
+Modal Editar Despesa
+![Modal editar despesa](./img/edit_expenses.png)
+
+Modal Editar Receita
+![Modal editar receita](./img/edit_income.png)
+
+Modal Editar Meta
+![Modal editar meta](./img/edit_goal.png)
