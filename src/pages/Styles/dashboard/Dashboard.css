@@ -1,0 +1,118 @@
+/* Estilo do corpo da pagina */
+body {
+  background-color: #e9ecef;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  height: 98vh;
+}
+/* Estilos para o conteúdo principal */
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffff;
+  border-radius: 12px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.09) 1rem 1rem 4px);
+}
+main header {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main header .menu {
+  display: none;
+}
+
+/* Estilos para a barra lateral */
+aside {
+  flex: 0;
+  width: 200px;
+  color: #ffff;
+  float: left;
+  background: linear-gradient(#42424a, #191919);
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+aside label {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Estilos para a lista de botões */
+.button-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.button-list li {
+  margin-bottom: 5px;
+}
+
+.button-list li button {
+  width: 100%;
+  padding: 10px;
+  gap: 5px;
+  border: none;
+  background-color: #08080800;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.button-list li button:hover {
+  background-color: #08080850;
+}
+
+/* Estilos específicos para o botão Selecionado */
+.button-list .green-button {
+  background-color: #4caf50;
+}
+
+.button-list .green-button:hover {
+  background-color: #388e3c;
+}
+
+.exit-button {
+  margin-top: auto;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.exit-button:hover {
+  background-color: #bd2130;
+}
+
+/* Estilos para telas menores (mobile) */
+@media screen and (max-width: 768px) {
+  aside {
+    position: fixed;
+    display: none;
+    height: 95vh;
+    z-index: 1;
+  }
+
+  main {
+    flex: 1; /* Expandindo o conteúdo principal para ocupar todo o espaço disponível :D */
+  }
+
+  main header .menu {
+    display: flex;
+    border: none;
+    background-color: #ffffff00;
+  }
+}
