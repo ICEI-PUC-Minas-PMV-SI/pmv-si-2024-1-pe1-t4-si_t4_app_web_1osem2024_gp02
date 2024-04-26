@@ -5,38 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="../Styles/dashboard/Dashboard.css" />
-    <script src="../Scripts/dashboard/menu.js"></script>
+    
   </head>
   <body>
     <aside id="Sidebar">
       <label>
-        <img src="/src/assets/icons/PigIcon.svg" />
+        <img src="../../assets/icons/PigIcon.svg" />
         <h2>Controle Financeiro</h2>
       </label>
       <p>Telas</p>
       <ul class="button-list">
         <li>
-          <button><img src="/src/assets/icons/Square.svg" />Resumo</button>
+          <button id="resumoBtn" class="menu-btn"><img src="../../assets/icons/Square.svg" />Resumo</button>
         </li>
         <li>
-          <button><img src="/src/assets/icons/Swap.svg" />Transações</button>
+          <button id="transacoesBtn" class="menu-btn"><img src="../../assets/icons/Swap.svg" />Transações</button>
         </li>
         <li>
-          <button class="green-button">
-            <img src="/src/assets/icons/Flag.svg" />Metas
+          <button id="metasBtn" class="menu-btn">
+            <img src="../../assets/icons/Flag.svg" />Metas
           </button>
         </li>
       </ul>
       <button class="exit-button">Sair</button>
     </aside>
     <main id="Main">
-      <header>
-        <h1>Conteúdo Principal</h1>
-        <button class="menu" onclick="openNav()">
-          <img src="/src/assets/icons/Menu.svg" />
-        </button>
-      </header>
-      <p>Seja Bem vindo!</p>
+      <section id="conteudoPrincipal">
+        <header>
+          <h1>Conteúdo Principal</h1>
+          <button class="menu" onclick="openNav()">
+            <img src="../../assets/icons/Menu.svg" />
+          </button>
+        </header>
+        <p>Seja Bem vindo!</p>
+      </section>
+      <!-- Seção para Resumo -->
+      <section id="resumoSection" class="content-section hidden">
+        <!-- Conteúdo do Resumo -->
+        <header>
+          <h2>Resumo</h2>
+        </header>
+      </section>
+       <!-- Seção para Transações -->
+  <section id="transacoesSection" class="content-section hidden">
+    <!-- Conteúdo para transações -->
+    <header>
+      <h2>Minhas Transações</h2>
+      <div>
+        <button class="transacao-button receita">Receita</button>
+        <button class="transacao-button despesa">Despesa</button>
+      </div>
+    </header>
+  </section>
+<!-- Seção para Metas -->
+  <section id="metasSection" class="content-section hidden">
+    <!-- Conteúdo das Metas -->
+    <header>
+      <h2>Metas</h2>
+    </header>
+  </section>
     </main>
+    <script src="../Scripts/dashboard/menu.js"></script> 
   </body>
 </html>

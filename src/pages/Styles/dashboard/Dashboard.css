@@ -76,6 +76,7 @@ aside label {
 /* Estilos específicos para o botão Selecionado */
 .button-list .green-button {
   background-color: #4caf50;
+  color: #fff;
 }
 
 .button-list .green-button:hover {
@@ -116,3 +117,9 @@ aside label {
     background-color: #ffffff00;
   }
 }
+
+.hidden {
+  display: none;
+}
+
+
