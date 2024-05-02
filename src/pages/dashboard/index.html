@@ -46,17 +46,22 @@
           <h2>Resumo</h2>
         </header>
       </section>
-       <!-- Seção para Transações -->
-  <section id="transacoesSection" class="content-section hidden">
-    <!-- Conteúdo para transações -->
-    <header>
-      <h2>Minhas Transações</h2>
-      <div>
-        <button class="transacao-button receita">Receita</button>
-        <button class="transacao-button despesa">Despesa</button>
-      </div>
-    </header>
-  </section>
+      <!-- Seção para Transações -->
+      <section id="transacoesSection" class="content-section hidden">
+        <header>
+          <h2>Minhas Transações</h2>
+          <div>
+            <button class="transacao-button receita" onclick="showModal('addIncomeModal')">+ Receita</button>
+            <button class="transacao-button despesa" onclick="showModal('addExpenseModal')">+ Despesa</button>
+            
+          </div>
+        </header>
+        <div id="transactionsList"></div>
+      </section>
+    <!-- Seção para Metas -->
+    <section id="metasSection" class="content-section hidden">
+        <header><h2>Metas</h2></header>
+    </section>
 <!-- Seção para Metas -->
   <section id="metasSection" class="content-section hidden">
     <!-- Conteúdo das Metas -->
@@ -65,6 +70,109 @@
     </header>
   </section>
     </main>
+  <!-- Modais -->
+  <!-- Modal Adicionar Receita -->
+<div id="addIncomeModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="hideModal('addIncomeModal')">&times;</span>
+    <h2>Adicionar Receita</h2>
+    <label for="incomeDescription">Descrição:</label>
+    <input type="text" id="incomeDescription" placeholder="Descrição">
+    <label for="incomeValue">Valor:</label>
+    <input type="number" id="incomeValue" placeholder="Valor">
+    <label for="incomeDate">Data de pagamento:</label>
+    <input type="date" id="incomeDate" placeholder="Data de pagamento">
+    <label for="incomeCategory">Categoria:</label>
+    <select id="incomeCategory">
+      <option value="">Sem Categoria</option>
+      <option value="Salário">Salário</option>
+      <option value="Investimentos">Investimentos</option>
+    </select>
+    <button onclick="addIncome()">Adicionar</button>
+    <button onclick="hideModal('addIncomeModal')">Fechar</button>
+  </div>
+</div>
+
+<!-- Modal Editar Receita -->
+<div id="editIncomeModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="hideModal('editIncomeModal')">&times;</span>
+    <h2>Editar Receita</h2>
+    <label for="editIncomeDescription">Descrição:</label>
+    <input type="text" id="editIncomeDescription" placeholder="Descrição">
+    <label for="editIncomeValue">Valor:</label>
+    <input type="number" id="editIncomeValue" placeholder="Valor">
+    <label for="editIncomeDate">Data de pagamento:</label>
+    <input type="date" id="editIncomeDate" placeholder="Data de pagamento">
+    <label for="editIncomeCategory">Categoria:</label>
+    <select id="editIncomeCategory">
+      <option value="">Sem Categoria</option>
+      <option value="Salário">Salário</option>
+      <option value="Investimentos">Investimentos</option>
+    </select>
+    <input type="hidden" id="editIncomeId">
+    <button onclick="saveEditedTransaction()">Salvar</button>
+    <button onclick="hideModal('editIncomeModal')">Fechar</button>
+  </div>
+</div>
+
+<!-- Modal Adicionar Despesa -->
+<div id="addExpenseModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="hideModal('addExpenseModal')">&times;</span>
+    <h2>Adicionar Despesa</h2>
+    <label for="expenseDescription">Descrição:</label>
+    <input type="text" id="expenseDescription" placeholder="Descrição">
+    <label for="expenseValue">Valor:</label>
+    <input type="number" id="expenseValue" placeholder="Valor">
+    <label for="expenseDate">Data de pagamento:</label>
+    <input type="date" id="expenseDate" placeholder="Data de pagamento">
+    <label for="expenseCategory">Categoria:</label>
+    <select id="expenseCategory">
+      <option value="">Sem Categoria</option>
+      <option value="Aluguel">Aluguel</option>
+      <option value="Compras">Compras</option>
+      <option value="Educação">Educação</option>
+    </select>
+    <button onclick="addExpense()">Adicionar</button>
+    <button onclick="hideModal('addExpenseModal')">Fechar</button>
+  </div>
+</div>
+
+<!-- Modal Editar Despesa -->
+<div id="editExpenseModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="hideModal('editExpenseModal')">&times;</span>
+    <h2>Editar Despesa</h2>
+    <label for="editExpenseDescription">Descrição:</label>
+    <input type="text" id="editExpenseDescription" placeholder="Descrição">
+    <label for="editExpenseValue">Valor:</label>
+    <input type="number" id="editExpenseValue" placeholder="Valor">
+    <label for="editExpenseDate">Data de pagamento:</label>
+    <input type="date" id="editExpenseDate" placeholder="Data de pagamento">
+    <label for="editExpenseCategory">Categoria:</label>
+    <select id="editExpenseCategory">
+      <option value="">Sem Categoria</option>
+      <option value="Aluguel">Aluguel</option>
+      <option value="Compras">Compras</option>
+      <option value="Educação">Educação</option>
+    </select>
+    <input type="hidden" id="editExpenseId">
+    <button onclick="saveEditedTransaction()">Salvar</button>
+    <button onclick="hideModal('editExpenseModal')">Fechar</button>
+  </div>
+</div>
+
+<!-- Modal Confirmar Remoção -->
+<div id="confirmRemovalModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="hideModal('confirmRemovalModal')">&times;</span>
+    <h2>Confirmar Remoção</h2>
+    <p id="removalConfirmationText"></p>
+    <button onclick="deleteConfirmedTransaction()">Confirmar</button>
+    <button onclick="hideModal('confirmRemovalModal')">Cancelar</button>
+  </div>
+</div>
     <script src="../Scripts/dashboard/menu.js"></script> 
   </body>
 </html>
