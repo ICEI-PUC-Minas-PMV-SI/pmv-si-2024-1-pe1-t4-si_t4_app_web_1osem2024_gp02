@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 
 <aside id="Sidebar">
-    <label>
-      <img src="../../assets/icons/PigIcon.svg" />
+  <label>
+      <img src="/src/assets/icons/PigIcon.svg" />
       <h2>Controle Financeiro</h2>
-    </label>
-    <p>Telas</p>
-    <ul class="button-list">
+  </label>
+  <p>Telas</p>
+  <ul class="button-list">
       <li>
-        <button id="resumoBtn" class="menu-btn"><img src="../../assets/icons/Square.svg" />Resumo</button>
+          <a href="/src/pages/dashboard/index.html">
+              <button id="resumoBtn" class="menu-btn">
+                  <img src="/src/assets/icons/Square.svg" />Resumo
+              </button>
+          </a>
       </li>
       <li>
-        <button id="transacoesBtn" class="menu-btn"><img src="../../assets/icons/Swap.svg" />Transações</button>
+          <a href="transacoes.html">
+              <button id="transacoesBtn" class="menu-btn">
+                  <img src="/src/assets/icons/Swap.svg" />Transações
+              </button>
+          </a>
       </li>
       <li>
-        <button id="metasBtn" class="menu-btn">
-          <img src="../../assets/icons/Flag.svg" />Metas
-        </button>
+          <a href="/src/pages/metas/index.html">
+              <button id="metasBtn" class="menu-btn">
+                  <img src="/src/assets/icons/Flag.svg" />Metas
+              </button>
+          </a>
       </li>
-    </ul>
-    <button class="exit-button">Sair</button>
-  </aside>
+  </ul>
+  <a href="logout.html">
+      <button class="exit-button">Sair</button>
+  </a>
+</aside>

@@ -4,37 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../Styles/dashboard/Dashboard.css" />
+    <link rel="stylesheet" href="/src/pages/Styles/dashboard/Dashboard.css" />
     
   </head>
   <body>
-    <aside id="Sidebar">
-      <label>
-        <img src="../../assets/icons/PigIcon.svg" />
-        <h2>Controle Financeiro</h2>
-      </label>
-      <p>Telas</p>
-      <ul class="button-list">
-        <li>
-          <button id="resumoBtn" class="menu-btn"><img src="../../assets/icons/Square.svg" />Resumo</button>
-        </li>
-        <li>
-          <button id="transacoesBtn" class="menu-btn"><img src="../../assets/icons/Swap.svg" />Transações</button>
-        </li>
-        <li>
-          <button id="metasBtn" class="menu-btn">
-            <img src="../../assets/icons/Flag.svg" />Metas
-          </button>
-        </li>
-      </ul>
-      <button class="exit-button">Sair</button>
-    </aside>
+    <div id="sidebarContainer" style="display: flex;"></div>
     <main id="Main">
       <section id="conteudoPrincipal">
         <header>
           <h1>Conteúdo Principal</h1>
           <button class="menu" onclick="openNav()">
-            <img src="../../assets/icons/Menu.svg" />
+            <img src="/src/assets/icons/Menu.svg" />
           </button>
         </header>
         <p>Seja Bem vindo!</p>
@@ -173,6 +153,7 @@
     <button onclick="hideModal('confirmRemovalModal')">Cancelar</button>
   </div>
 </div>
-    <script src="../Scripts/dashboard/menu.js"></script> 
+<script src="/src/pages/Scripts/components/sidebar.js"></script>
+    <script src="/src/pages/Scripts/dashboard/menu.js"></script> 
   </body>
 </html>
