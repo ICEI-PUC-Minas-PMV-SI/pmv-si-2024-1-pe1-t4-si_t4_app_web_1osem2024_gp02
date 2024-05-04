@@ -2,33 +2,43 @@
 
 <aside id="Sidebar">
   <label>
-      <img src="/src/assets/icons/PigIcon.svg" />
-      <h2>Controle Financeiro</h2>
+      <img src="/src/assets/icons/PigIcon.svg" alt="App logo"/>
+      <h3>Controle Financeiro</h3>
   </label>
+    <div class="h-divider"></div>
   <ul class="button-list">
       <li>
-          <a href="/src/pages/dashboard/index.html">
+          <a href="/src/pages/dashboard">
               <button id="resumoBtn" class="menu-btn">
-                  <img src="/src/assets/icons/Square.svg" />Resumo
+                  <div class="sidebar__icon-wrapper">
+                      <img src="/src/assets/icons/Square.svg" width="18px" height="18px"/>
+                  </div>
+                  Resumo
               </button>
           </a>
       </li>
       <li>
-          <a href="/src/pages/transacoes/index.html">
+          <a href="/src/pages/transacoes">
               <button id="transacoesBtn" class="menu-btn">
-                  <img src="/src/assets/icons/Swap.svg" />Transações
+                  <div class="sidebar__icon-wrapper">
+                    <img src="/src/assets/icons/Swap.svg" width="24px" height="24px"/>
+                  </div>
+                  Transações
               </button>
           </a>
       </li>
       <li>
-          <a href="/src/pages/metas/index.html">
+          <a href="/src/pages/metas">
               <button id="metasBtn" class="menu-btn">
-                  <img src="/src/assets/icons/Flag.svg" />Metas
+                  <div class="sidebar__icon-wrapper">
+                    <img src="/src/assets/icons/Flag.svg" width="24px" height="24px"/>
+                  </div>
+                  Metas
               </button>
           </a>
       </li>
   </ul>
-  <a href="logout.html">
+  <a href="logout.html" class="sidebar__logout-a">
       <button class="exit-button">Sair</button>
   </a>
 </aside>

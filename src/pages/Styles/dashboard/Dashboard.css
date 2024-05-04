@@ -1,12 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 /* Estilo do corpo da pagina */
 body {
+  padding: 10px;
   background-color: #e9ecef;
   font-family: "Open Sans", sans-serif;
   display: flex;
-  gap: 15px;
-  flex-direction: row;
-  height: 98vh;
 }
+
 /* Estilos para o conteúdo principal */
 main {
   flex: 1;
@@ -15,6 +28,7 @@ main {
   border-radius: 12px;
   filter: drop-shadow(rgba(0, 0, 0, 0.09) 1rem 1rem 4px);
 }
+
 main header {
   gap: 10px;
   display: flex;
@@ -28,10 +42,9 @@ main header .menu {
 
 /* Estilos para a barra lateral */
 aside {
-  flex: 0;
-  width: 200px;
+  width: 250px;
+  margin-right: 20px;
   color: #ffff;
-  float: left;
   background: linear-gradient(#42424a, #191919);
   padding: 10px;
   border-radius: 12px;
@@ -43,7 +56,21 @@ aside label {
   gap: 10px;
   display: flex;
   align-items: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.invert-x {
+    transform: scaleX(-1);
+}
+
+.h-divider {
+  width: calc(100% + 20px);
+  margin-left: -10px;
   border-bottom: 1px solid #ccc;
+  opacity: 0.5;
 }
 
 /* Estilos para a lista de botões */
@@ -54,6 +81,18 @@ aside label {
 
 .button-list li {
   margin-bottom: 5px;
+}
+
+.sidebar__icon-wrapper {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar__logout-a {
+  margin-top: auto;
 }
 
 .button-list li button {
@@ -92,6 +131,8 @@ aside label {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
 }
 
 .exit-button:hover {
@@ -103,7 +144,6 @@ aside label {
   aside {
     position: fixed;
     display: none;
-    height: 95vh;
     z-index: 1;
   }
 
@@ -130,10 +170,10 @@ aside label {
   cursor: pointer;
 }
 .receita {
-  background-color: #4CAF50; 
+  background-color: #4CAF50;
 }
 .despesa {
-  background-color: #F44336; 
+  background-color: #F44336;
 }
 
 .modal {
@@ -176,4 +216,10 @@ input[type="text"], input[type="number"], input[type="date"], select {
   padding: 10px;
   margin-top: 8px;
   box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #E91E63;
+  --success-color: #4CAF50;
+  --info-color: #03A9F4;
 }

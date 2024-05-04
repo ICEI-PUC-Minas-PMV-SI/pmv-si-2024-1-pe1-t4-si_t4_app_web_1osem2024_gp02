@@ -1,24 +1,239 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/src/pages/Styles/dashboard/Dashboard.css" />
-    
-  </head>
-  <body>
-    <div id="sidebarContainer" style="display: flex;"></div>
-    <main id="Main">
-      <!-- Seção para Resumo -->
-      <section id="resumoSection" class="content-section">
-        <!-- Conteúdo do Resumo -->
-        <header>
-          <h2>Resumo</h2>
-        </header>
-      </section>
-      <!-- Seção para Transações -->
+    <link rel="stylesheet" href="/src/pages/Styles/dashboard/Dashboard.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+<div id="sidebarContainer" style="display: flex;"></div>
+<div class="page">
+    <div class="header-row">
+        <h2>Resumo</h2>
+        <div class="date-row">
+            <button class="date-btn">
+                <img src="../../assets/icons/chevron_left.svg"/>
+            </button>
+            <span class="date-text">Dezembro 2024</span>
+            <button class="date-btn" onclick="console.log('test')">
+                <img src="../../assets/icons/chevron_left.svg" class="invert-x"/>
+            </button>
+        </div>
+    </div>
+    <div class="summary-cards">
+        <div class="card relative">
+            <div class="icon-bg green">
+                <img src="../../assets/icons/money.svg"/>
+            </div>
+            <span class="text light right summary-card-title">Balanço</span>
+            <span class="text extra-bold right md">128,00</span>
+        </div>
+        <div class="card relative">
+            <div class="icon-bg blue">
+                <img src="../../assets/icons/money.svg"/>
+            </div>
+            <span class="text light right summary-card-title">Balanço <b>Hoje</b></span>
+            <span class="text extra-bold right md">128,00</span>
+        </div>
+        <div class="card relative">
+            <div class="icon-bg orange">
+                <img src="../../assets/icons/money.svg"/>
+            </div>
+            <span class="text light right summary-card-title">Previsão de balanço</span>
+            <span class="text extra-bold right md">128,00</span>
+        </div>
+    </div>
+    <div class="card mt-24">
+        <h2 class="card-title">Entradas e Saídas</h2>
+        <div class="flex flex-col gap-8">
+            <div class="flex gap-8 items-center">
+                <span class="text light sm right hor-chart-desc">Entradas</span>
+                <div class="bg-green hor-chart-bar incomings-chart-bar">
+
+                </div>
+            </div>
+            <div class="flex-1 gap-8 items-center">
+                <span class="text light sm right hor-chart-desc">Saídas</span>
+                <div class="bg-primary hor-chart-bar expenses-chart-bar">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-24">
+        <h2 class="card-title">Por dia</h2>
+        <div class="overflow-x">
+            <div class="flex relative chart-container">
+                <div class="zero-line-chart"></div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 20px">120,00</span>
+                        <div class="vert-chart-bar absolute bg-green" style="height: 80px; top: 45px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">01/dez</span>
+                </div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 190px">80,00</span>
+                        <div class="vert-chart-bar absolute bg-primary" style="height: 60px; top: 125px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">02/dez</span>
+                </div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 190px">80,00</span>
+                        <div class="vert-chart-bar absolute bg-primary" style="height: 60px; top: 125px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">02/dez</span>
+                </div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 190px">80,00</span>
+                        <div class="vert-chart-bar absolute bg-primary" style="height: 60px; top: 125px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">02/dez</span>
+                </div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 20px">120,00</span>
+                        <div class="vert-chart-bar absolute bg-green" style="height: 80px; top: 45px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">05/dez</span>
+                </div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 20px">120,00</span>
+                        <div class="vert-chart-bar absolute bg-green" style="height: 80px; top: 45px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">06/dez</span>
+                </div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 190px">80,00</span>
+                        <div class="vert-chart-bar absolute bg-primary" style="height: 60px; top: 125px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">02/dez</span>
+                </div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 20px">120,00</span>
+                        <div class="vert-chart-bar absolute bg-green" style="height: 80px; top: 45px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">08/dez</span>
+                </div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 190px">80,00</span>
+                        <div class="vert-chart-bar absolute bg-primary" style="height: 60px; top: 125px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">09/dez</span>
+                </div>
+                <div class="flex flex-col shrink-1">
+                    <div class="chart-space">
+                        <span class="absolute chart-value" style="top: 190px">80,00</span>
+                        <div class="vert-chart-bar absolute bg-primary" style="height: 60px; top: 125px;"></div>
+                    </div>
+                    <span class="hor-chart-desc text center">10/dez</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-24">
+        <h2 class="card-title">Por categoria</h2>
+        <div class="overflow-x">
+            <div class="flex gap-8 relative chart-container">
+                <div class="flex flex-col">
+                    <div class="flex flex-col shrink-1">
+                        <div class="chart-space-positive">
+                            <span class="flex chart-value">80,00</span>
+                            <div class="vert-chart-bar bg-info" style="height: 60px; top: 125px;"></div>
+                        </div>
+                        <span class="hor-chart-desc text center mt-4">Mercado</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="flex flex-col shrink-1">
+                        <div class="chart-space-positive">
+                            <span class="flex chart-value">80,00</span>
+                            <div class="vert-chart-bar bg-info" style="height: 60px; top: 125px;"></div>
+                        </div>
+                        <span class="hor-chart-desc text center mt-4">Lazer</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="flex flex-col shrink-1">
+                        <div class="chart-space-positive">
+                            <span class="flex chart-value">80,00</span>
+                            <div class="vert-chart-bar bg-info" style="height: 60px; top: 125px;"></div>
+                        </div>
+                        <span class="hor-chart-desc text center mt-4">Saúde</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="flex flex-col shrink-1">
+                        <div class="chart-space-positive">
+                            <span class="flex chart-value">80,00</span>
+                            <div class="vert-chart-bar bg-info" style="height: 60px; top: 125px;"></div>
+                        </div>
+                        <span class="hor-chart-desc text center mt-4">Transporte</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="flex flex-col shrink-1">
+                        <div class="chart-space-positive">
+                            <span class="flex chart-value">80,00</span>
+                            <div class="vert-chart-bar bg-info" style="height: 60px; top: 125px;"></div>
+                        </div>
+                        <span class="hor-chart-desc text center mt-4">Educação</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="flex flex-col shrink-1">
+                        <div class="chart-space-positive">
+                            <span class="flex chart-value">80,00</span>
+                            <div class="vert-chart-bar bg-info" style="height: 60px; top: 125px;"></div>
+                        </div>
+                        <span class="hor-chart-desc text center mt-4">Casa</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="flex flex-col shrink-1">
+                        <div class="chart-space-positive">
+                            <span class="flex chart-value">80,00</span>
+                            <div class="vert-chart-bar bg-info" style="height: 60px; top: 125px;"></div>
+                        </div>
+                        <span class="hor-chart-desc text center mt-4">Cuidados Pessoais</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="flex flex-col shrink-1">
+                        <div class="chart-space-positive">
+                            <span class="flex chart-value">80,00</span>
+                            <div class="vert-chart-bar bg-info" style="height: 60px; top: 125px;"></div>
+                        </div>
+                        <span class="hor-chart-desc text center mt-4">Viagem</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="/src/pages/Scripts/components/sidebar.js"></script>
-    <script src="/src/pages/Scripts/dashboard/menu.js"></script> 
-  </body>
+<script src="/src/pages/Scripts/dashboard/menu.js"></script>
+</body>
 </html>
