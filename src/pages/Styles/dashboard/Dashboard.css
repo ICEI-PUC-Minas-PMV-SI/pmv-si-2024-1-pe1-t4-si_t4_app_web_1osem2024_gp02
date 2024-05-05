@@ -163,38 +163,58 @@ aside label {
 }
 
 .transacao-button {
-  padding: 10px 20px;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   color: white;
   cursor: pointer;
-}
-.receita {
-  background-color: #4CAF50;
-}
-.despesa {
-  background-color: #F44336;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin-right: 10px; 
 }
 
+.transacao-button.receita {
+  background-color: #4CAF50; 
+}
+
+.transacao-button.despesa {
+  background-color: #F44336; 
+}
+
+.transacao-button i {
+  margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.transacao-button:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
+
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 30%; /* Could be more or less, depending on screen size */
+  width: 30%;
+  padding-bottom: 40px; 
 }
 
 .close {
@@ -210,6 +230,38 @@ aside label {
   text-decoration: none;
   cursor: pointer;
 }
+.modal-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-top: 20px; 
+}
+
+.modal-button.close {
+  background-color: #6c757d; 
+}
+
+.modal-button.close:hover {
+  background-color: #5a6268;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-button.add, .modal-button.confirm, .modal-button.save {
+  background-color: #28a745; 
+}
+
+.modal-button.add:hover, .modal-button.confirm:hover, .modal-button.save:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 input[type="text"], input[type="number"], input[type="date"], select {
   width: 100%;
@@ -222,4 +274,75 @@ input[type="text"], input[type="number"], input[type="date"], select {
   --primary-color: #E91E63;
   --success-color: #4CAF50;
   --info-color: #03A9F4;
+}
+
+
+
+.transaction-item {
+  display: grid;
+  grid-template-columns:  1fr 3fr 1fr 1fr 2fr 1fr;
+  gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.2s ease-in-out; 
+}
+
+
+.transaction-type, .transaction-description, .transaction-value, .transaction-date, .transaction-category {
+  overflow: hidden; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.transaction-actions {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 10px; 
+}
+
+.transaction-actions button.edit {
+  background-color: #2196F3; 
+  color: white;
+}
+
+.transaction-actions button.remove {
+  background-color: #f44336; 
+  color: white;
+}
+
+.transaction-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-transform: none; 
+}
+
+.transaction-actions button i {
+  margin-right: 5px;
+}
+
+.transaction-actions button:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.transaction-actions button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+}
+
+
+#transactionsList .transaction-item.income {
+  background-color: #cefcd9;
+}
+
+#transactionsList .transaction-item.expense {
+  background-color: #f7ccd0;
 }

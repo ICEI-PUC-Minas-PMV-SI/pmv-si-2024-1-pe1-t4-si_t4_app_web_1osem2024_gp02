@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
     <div id="sidebarContainer" style="display: flex;"></div>
@@ -17,14 +19,18 @@
         <header>
           <h2>Minhas Transações</h2>
           <div>
-            <button class="transacao-button receita" onclick="showModal('addIncomeModal')">+ Receita</button>
-            <button class="transacao-button despesa" onclick="showModal('addExpenseModal')">+ Despesa</button>
-
+            <button class="transacao-button receita" onclick="showModal('addIncomeModal')">
+              <i class="fas fa-arrow-up"></i> Receita
+            </button>
+            <button class="transacao-button despesa" onclick="showModal('addExpenseModal')">
+              <i class="fas fa-arrow-down"></i> Despesa
+            </button>           
           </div>
         </header>
         <div id="transactionsList"></div>
       </section>
     </main>
+
   <!-- Modais -->
   <!-- Modal Adicionar Receita -->
 <div id="addIncomeModal" class="modal hidden">
@@ -43,8 +49,8 @@
       <option value="Salário">Salário</option>
       <option value="Investimentos">Investimentos</option>
     </select>
-    <button onclick="addIncome()">Adicionar</button>
-    <button onclick="hideModal('addIncomeModal')">Fechar</button>
+    <button class="modal-button close" onclick="hideModal('addIncomeModal')">Fechar</button>
+    <button class="modal-button add" onclick="addIncome()">Adicionar</button>
   </div>
 </div>
 
@@ -66,8 +72,8 @@
       <option value="Investimentos">Investimentos</option>
     </select>
     <input type="hidden" id="editIncomeId">
-    <button onclick="saveEditedTransaction()">Salvar</button>
-    <button onclick="hideModal('editIncomeModal')">Fechar</button>
+    <button class="modal-button save" onclick="saveEditedTransaction()">Salvar</button>
+    <button class="modal-button close" onclick="hideModal('editIncomeModal')">Fechar</button>
   </div>
 </div>
 
@@ -89,8 +95,8 @@
       <option value="Compras">Compras</option>
       <option value="Educação">Educação</option>
     </select>
-    <button onclick="addExpense()">Adicionar</button>
-    <button onclick="hideModal('addExpenseModal')">Fechar</button>
+    <button class="modal-button close" onclick="hideModal('addExpenseModal')">Fechar</button>
+    <button class="modal-button add" onclick="addExpense()">Adicionar</button>
   </div>
 </div>
 
@@ -113,8 +119,8 @@
       <option value="Educação">Educação</option>
     </select>
     <input type="hidden" id="editExpenseId">
-    <button onclick="saveEditedTransaction()">Salvar</button>
-    <button onclick="hideModal('editExpenseModal')">Fechar</button>
+    <button class="modal-button save" onclick="saveEditedTransaction()">Salvar</button>
+    <button class="modal-button close" onclick="hideModal('editExpenseModal')">Fechar</button>
   </div>
 </div>
 
@@ -124,8 +130,8 @@
     <span class="close" onclick="hideModal('confirmRemovalModal')">&times;</span>
     <h2>Confirmar Remoção</h2>
     <p id="removalConfirmationText"></p>
-    <button onclick="deleteConfirmedTransaction()">Confirmar</button>
-    <button onclick="hideModal('confirmRemovalModal')">Cancelar</button>
+    <button class="modal-button confirm" onclick="deleteConfirmedTransaction()">Confirmar</button>
+    <button class="modal-button close" onclick="hideModal('confirmRemovalModal')">Cancelar</button>
   </div>
 </div>
 <script src="/src/pages/Scripts/components/sidebar.js"></script>

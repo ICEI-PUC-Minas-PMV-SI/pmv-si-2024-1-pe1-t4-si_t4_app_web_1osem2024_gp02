@@ -50,28 +50,28 @@ document.addEventListener("DOMContentLoaded", function () {
 let transactions = [];
     let nextId = 1;  // Inicia IDs a partir de 1
     let currentTransactionType = '';
-
+    
     function renderTransactions() {
       const list = document.getElementById('transactionsList');
-      list.innerHTML = '';
-      if (transactions.length === 0) {
-        list.innerHTML = '<p>Nenhuma transação cadastrada.</p>';
-      } else {
-        transactions.forEach(transaction => {
+      list.innerHTML = ''; // Limpa a lista existente
+      transactions.forEach(transaction => {
           const div = document.createElement('div');
-          div.className = 'transaction-item'; 
+          div.className = `transaction-item ${transaction.type === 'Receita' ? 'income' : 'expense'}`;
           div.innerHTML = `
-            <strong>${transaction.type}</strong>: ${transaction.category} - R$ ${transaction.value}
-            Data: ${transaction.date} - Descrição: ${transaction.description}
-            <button onclick="showModal('${transaction.type === 'Receita' ? 'editIncomeModal' : 'editExpenseModal'}', ${transaction.type === 'Receita'}, ${transaction.id})">Editar</button>
-            <button onclick="confirmDeletion(${transaction.id})">Remover</button>
+              <div class="transaction-type"><strong>Tipo:</strong> ${transaction.type}</div>
+              <div class="transaction-description"><strong>Descrição:</strong> ${transaction.description}</div>
+              <div class="transaction-value"><strong>Valor:</strong> R$ ${transaction.value}</div>
+              <div class="transaction-date"><strong>Data:</strong> ${transaction.date}</div>
+              <div class="transaction-category"><strong>Categoria:</strong> ${transaction.category}</div>
+              <div class="transaction-actions">
+                  <button class="edit" onclick="showModal('${transaction.type === 'Receita' ? 'editIncomeModal' : 'editExpenseModal'}', ${transaction.type === 'Receita'}, ${transaction.id})"><i class="fas fa-edit"></i> Editar</button>
+                  <button class="remove" onclick="confirmDeletion(${transaction.id})"><i class="fas fa-trash"></i> Remover</button>
+              </div>
           `;
           list.appendChild(div);
-        });
-      }
-    }
-    
-
+      });
+  }
+  
     function saveToLocalStorage() {
       localStorage.setItem('transactions', JSON.stringify(transactions));
       localStorage.setItem('nextId', nextId.toString());
