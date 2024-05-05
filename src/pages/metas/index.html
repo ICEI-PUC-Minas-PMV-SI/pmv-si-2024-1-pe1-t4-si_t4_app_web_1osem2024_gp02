@@ -5,23 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metas</title>
     <link rel="stylesheet" href="/src/pages/Styles/dashboard/Dashboard.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="sidebarContainer" style="display: flex;"></div>
-    <main id="Main">
-      <section id="">
-        <header>
-          <h1>Conteúdo Metas</h1>
-          <button class="menu" onclick="openNav()">
-            <img src="/src/assets/icons/Menu.svg" />
-          </button>
-        </header>
-        <p>Seja Bem vindo!</p>
-    </section>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/pages/metas/style.css" />
+  </head>
+  <body>
+    <div id="sidebarContainer" style="display: flex"></div>
+    <div class="page">
+      <div class="card relative">
+        <div class="header-row">
+          <h2>Metas de Despesas</h2>
+        </div>
+        <div class="card-line relative">
+          <h3>Meta Total</h3>
+          <div class="text-right">
+            <span class="text-red">- R$ 100,00</span>
+            <span class="text-bold">R$ 2.300,00</span>
+          </div>
+        </div>
+        <div class="header-row">
+          <h2>Por categoria:</h2>
+        </div>
+        <div class="card-line relative mb-10">
+          <div class="circle bg-red"></div>
+          <span class="text-bold">Mercado</span>
+          <div class="text-right">
+            <span class="text-red">- R$ 100,00</span>
+            <span class="text-bold">R$ 800,00</span>
+          </div>
+        </div>
+        <div class="card-line relative mb-10">
+          <div class="circle bg-yellow"></div>
+          <span class="text-bold">Lazer</span>
+          <div class="text-right">
+            <span class="text-green">+ R$ 100,00</span>
+            <span class="text-bold">R$ 800,00</span>
+          </div>
+        </div>
+        <div class="card-line relative mb-10">
+          <div class="circle bg-blue"></div>
+          <span class="text-bold">Saúde</span>
+          <div class="text-right">
+            <span class="text-green">+ R$ 100,00</span>
+            <span class="text-bold">R$ 900,00</span>
+          </div>
+        </div>
+        <div class="card-line relative mb-10">
+          <div class="circle bg-green"></div>
+          <span class="text-bold">Transporte</span>
+          <div class="text-right">
+            <span class="text-red">- R$ 67,00</span>
+            <span class="text-bold">R$ 250,00</span>
+          </div>
+        </div>
+        <div class="card-line relative mb-10">
+          <div class="circle bg-black"></div>
+          <span class="text-bold">Educação</span>
+          <div class="text-right">
+            <span class="text-green">+ R$ 30,00</span>
+            <span class="text-bold">R$ 100,00</span>
+          </div>
+        </div>
+        <div class="card-line relative mb-10">
+          <div class="circle bg-purple"></div>
+          <span class="text-bold">Casa</span>
+          <div class="text-right">
+            <span class="text-green">+ R$ 100,00</span>
+            <span class="text-bold">R$ 800,00</span>
+          </div>
+        </div>
+        <div class="card-line relative mb-10">
+          <div class="circle bg-blue"></div>
+          <span class="text-bold">Cuidados Pessoais</span>
+          <div class="text-right">
+            <span class="text-red">- R$ 22,00</span>
+            <span class="text-bold">R$ 51,00</span>
+          </div>
+        </div>
+        <div class="card-line relative mb-10">
+          <div class="circle bg-pink"></div>
+          <span class="text-bold">Viagem</span>
+          <div class="text-right">
+            <span class="text-green">+ R$ 100,00</span>
+            <span class="text-bold">R$ 300,00</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="/src/pages/Scripts/components/sidebar.js"></script>
     <script src="/src/pages/Scripts/dashboard/menu.js"></script>
   </body>
