@@ -30,7 +30,21 @@
           </button>
         </div>
       </header>
+      <div id="monthYearWrapper">
+        <button onclick="changeMonthYear(-1)">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <span id="monthYear"></span>
+        <button onclick="changeMonthYear(1)">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div id="transactionAlerts"></div>
       <div id="transactionsList"></div>
+      <div id="resultWrapper">
+        <span class="total">Total do mês</span>
+        <span id="monthResult">+ R$ 128,00</span>
+      </div>
     </section>
   </main>
 

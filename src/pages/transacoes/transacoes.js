@@ -1,12 +1,80 @@
 let transactions = [];
+let selectedMonthYear = new Date();
+
+renderSelectedMonthYear()
+renderAlerts()
+
+function getCorrectDate(date) {
+    const [year, month, day] = date.split('-');
+    return new Date(year, month - 1, day);
+}
+
+function getTransactionFromThisMonth() {
+    return transactions.filter(t => {
+        const [year, month] = t.date.split('-');
+        return parseInt(year, 10) === selectedMonthYear.getFullYear() && parseInt(month, 10) === selectedMonthYear.getMonth() + 1;
+    })
+}
+
+function renderSelectedMonthYear() {
+    const selectedMonthYearSpan = document.getElementById('monthYear');
+    const dateText = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric' }).format(selectedMonthYear);
+    selectedMonthYearSpan.textContent = dateText.charAt(0).toUpperCase() + dateText.slice(1);
+}
+
+function renderResultFromMonth() {
+    const monthResult = document.getElementById('monthResult');
+
+    const currentMonthTransactions = getTransactionFromThisMonth();
+    const totalIncome = currentMonthTransactions.filter(t => t.type === 'Receita').reduce((acc, t) => acc + t.value, 0);
+    const totalExpense = currentMonthTransactions.filter(t => t.type === 'Despesa').reduce((acc, t) => acc + t.value, 0);
+    const balance = totalIncome - totalExpense;
+
+    monthResult.innerHTML = `${balance < 0 ? '-' : '+'} R$ ${Math.abs(balance).toFixed(2)}`;
+    monthResult.className = balance < 0 ? 'negative' : 'positive';
+}
+
+function changeMonthYear(increment) {
+    selectedMonthYear.setMonth(selectedMonthYear.getMonth() + increment);
+    updateUI()
+}
+
+function renderAlerts() {
+    const alerts = document.getElementById('transactionAlerts');
+
+    const unpaidTransactions = transactions.filter(t => {
+        return !t.wasPaid && getCorrectDate(t.date).getTime() <= new Date().getTime();
+    });
+
+    alerts.innerHTML = ``;
+
+    if (unpaidTransactions.length) {
+        const div = document.createElement('div');
+        div.className = 'transaction-alert'
+        div.innerHTML = `<i class="fas fa-exclamation"  style="font-size: 12px;"></i><span>Você tem ${unpaidTransactions.length} transação(ões) pendente(s) de pagamento.</span>`;
+        alerts.appendChild(div);
+    }
+}
+
+function updateUI() {
+    renderSelectedMonthYear()
+    renderAlerts()
+    renderTransactions()
+    renderResultFromMonth()
+}
 
 function renderTransactions() {
+    const currentMonthTransactions = transactions.filter(t => {
+        const [year, month] = t.date.split('-');
+        return parseInt(year, 10) === selectedMonthYear.getFullYear() && parseInt(month, 10) === selectedMonthYear.getMonth() + 1;
+    });
+
     const list = document.getElementById('transactionsList');
     list.innerHTML = ''; // Limpa a lista existente
-    if (transactions.length === 0) {
-        list.innerHTML = '<p>Nenhuma transação cadastrada.</p>';
+    if (currentMonthTransactions.length === 0) {
+        list.innerHTML = '<p style="text-align: center">Nenhuma transação cadastrada para esse mês.</p>';
     } else {
-        transactions.forEach(transaction => {
+        currentMonthTransactions.forEach(transaction => {
             const [year, month, day] = transaction.date.split("-");
 
             const date = new Date(year, month - 1, day);
@@ -101,7 +169,7 @@ function saveEditedTransaction() {
             wasPaid
         };
         saveToLocalStorage();
-        renderTransactions();
+        updateUI()
         hideModal(isIncome ? 'editIncomeModal' : 'editExpenseModal');
     } else {
         alert('Transação não encontrada.');
@@ -111,12 +179,12 @@ function saveEditedTransaction() {
 function deleteTransaction(id) {
     transactions = transactions.filter(t => t.id !== id);
     saveToLocalStorage();  // salva depois de deletar
-    renderTransactions();
+    updateUI()
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     loadFromLocalStorage();
-    renderTransactions();
+    updateUI()
 });
 
 function clearModal(isIncome) {
@@ -183,7 +251,7 @@ function addIncome() {
 
     transactions.push({ id: transactions.length, type: 'Receita', description, value, date, category, wasPaid });
     saveToLocalStorage();
-    renderTransactions();
+    updateUI()
     hideModal('addIncomeModal');
 }
 
@@ -216,7 +284,7 @@ function addExpense() {
 
     transactions.push({ id: transactions.length, type: 'Despesa', description, value, date, category, wasPaid });
     saveToLocalStorage();
-    renderTransactions();
+    updateUI()
     hideModal('addExpenseModal');
 }
 
@@ -235,7 +303,7 @@ function changeWasPaid(id) {
     if (transaction) {
         transaction.wasPaid = !transaction.wasPaid;
         saveToLocalStorage();
-        renderTransactions();
+        updateUI()
     }
 }
 
