@@ -9,19 +9,34 @@ function renderTransactions() {
         list.innerHTML = '<p>Nenhuma transação cadastrada.</p>';
     } else {
         transactions.forEach(transaction => {
+            const date = new Date(transaction.date);
+            const formattedDate = new Intl.DateTimeFormat('pt-BR').format(date)
+
             const div = document.createElement('div');
             div.className = `transaction-item ${transaction.type === 'Receita' ? 'income' : 'expense'}`;
             div.innerHTML = `
-        <div class="transaction-type"><strong>Tipo:</strong> ${transaction.type}</div>
-        <div class="transaction-description"><strong>Descrição:</strong> ${transaction.description}</div>
-        <div class="transaction-value"><strong>Valor:</strong> R$ ${transaction.value}</div>
-        <div class="transaction-date"><strong>Data:</strong> ${transaction.date}</div>
-        <div class="transaction-category"><strong>Categoria:</strong> ${transaction.category}</div>
-        <div class="transaction-actions">
-            <button class="edit" onclick="showModal('${transaction.type === 'Receita' ? 'editIncomeModal' : 'editExpenseModal'}', ${transaction.type === 'Receita'}, ${transaction.id})"><i class="fas fa-edit"></i> Editar</button>
-            <button class="remove" onclick="confirmDeletion(${transaction.id})"><i class="fas fa-trash"></i> Remover</button>
-        </div>
-    `;
+                <div class="transaction-item-content">
+                    <div class="transaction-type-bg ${transaction.type === 'Receita' ? 'income' : 'expense'}">
+                        <i class="fas ${transaction.type === 'Receita' ? 'fa-arrow-down' : 'fa-arrow-up'}"></i>
+                    </div>
+                    <div>
+                        <div class="transaction-description">${transaction.description}</div>
+                        <div class="transaction-value ${transaction.type === 'Receita' ? 'income' : 'expense'}">${transaction.type === 'Receita' ? '+' : '-'} R$ ${transaction.value}</div>
+                    </div>
+
+                    <div class="transaction-category">${transaction.category}</div>
+                    
+                    <div class="transaction-date">${formattedDate}</div>
+                </div>
+                
+                <div>
+                    <div class="transaction-actions">
+                        <button class="remove" onclick="confirmDeletion(${transaction.id})"><i class="fas fa-trash"></i></button>
+                        <button class="edit" onclick="showModal('${transaction.type === 'Receita' ? 'editIncomeModal' : 'editExpenseModal'}', ${transaction.type === 'Receita'}, ${transaction.id})"><i class="fas fa-pen"></i></button>
+                    </div>
+                </div>
+            `;
+
             list.appendChild(div);
         });
     }
@@ -165,7 +180,7 @@ function showModal(modalId, isIncome, transactionId) {
         document.getElementById(prefix + 'Category').value = transaction.category;
         document.getElementById(prefix + 'Id').value = transaction.id;
     }
-    document.getElementById(modalId).style.display = 'block';
+    document.getElementById(modalId).style.display = 'flex';
 }
 
 

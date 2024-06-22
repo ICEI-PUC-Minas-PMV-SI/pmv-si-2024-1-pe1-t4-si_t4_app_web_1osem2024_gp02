@@ -1,39 +1,42 @@
+.actions-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
 .transacao-button {
-    display: inline-flex;
+    display: flex;
+    gap: 8px;
     align-items: center;
     justify-content: center;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    margin-right: 10px;
 }
 
 .transacao-button.receita {
-    background-color: #4CAF50;
+    background: rgb(76,175,80);
+    background: linear-gradient(225deg, rgba(76,175,80,1) 0%, rgba(32,73,33,1) 100%);
 }
 
 .transacao-button.despesa {
-    background-color: #F44336;
-}
-
-.transacao-button i {
-    margin-right: 5px;
-    /* Espaço entre o ícone e o texto */
+    background: rgb(233,30,99);
+    background: linear-gradient(225deg, rgba(233,30,99,1) 0%, rgba(131,17,56,1) 100%);
 }
 
 .transacao-button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .modal {
     display: none;
     position: fixed;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
     left: 0;
     top: 0;
@@ -44,13 +47,12 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 30%;
+    width: 90%;
+    max-width: 350px;
     padding-bottom: 40px;
 }
 
@@ -106,16 +108,88 @@
 
 
 .transaction-item {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr 1fr 2fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     border-radius: 8px;
+    gap: 12px;
     padding: 10px;
     margin-bottom: 10px;
     transition: background-color 0.2s ease-in-out;
 }
 
+.transaction-item-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.transaction-type-bg {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.transaction-type-bg i {
+    font-size: 12px;
+}
+
+.transaction-type-bg.income {
+    background: rgb(76,175,80);
+    background: linear-gradient(225deg, rgba(76,175,80,1) 0%, rgba(32,73,33,1) 100%);
+}
+
+.transaction-type-bg.expense {
+    background: rgb(233,30,99);
+    background: linear-gradient(225deg, rgba(233,30,99,1) 0%, rgba(131,17,56,1) 100%);
+}
+
+.transaction-date {
+    margin-left: auto;
+    color: #212529;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.transaction-category {
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    align-self: flex-start;
+    margin-left: 8px;
+    border-radius: 4px;
+    padding: 3px 10px;
+    background-color: #03A9F4;
+}
+
+.transaction-description {
+    font-weight: 800;
+}
+
+.transaction-value {
+    font-weight: 800;
+}
+
+.transaction-value.expense {
+    color: var(--primary-color);
+}
+
+.transaction-value.income {
+    color: var(--success-color);
+}
+
+#transactionsList .transaction-item.income {
+    background-color: #cefcd9;
+}
+
+#transactionsList .transaction-item.expense {
+    background-color: #f7ccd0;
+}
 
 .transaction-type,
 .transaction-description,
@@ -130,6 +204,7 @@
 .transaction-actions {
     display: flex;
     justify-content: flex-end;
+    height: 40px;
     gap: 10px;
 }
 
@@ -149,15 +224,12 @@
     justify-content: center;
     padding: 8px 16px;
     font-size: 14px;
+    width: 50px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     text-transform: none;
-}
-
-.transaction-actions button i {
-    margin-right: 5px;
 }
 
 .transaction-actions button:hover {
@@ -169,11 +241,15 @@
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
+@media (max-width: 600px) {
+    .transaction-item {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0px;
+    }
 
-#transactionsList .transaction-item.income {
-    background-color: #cefcd9;
-}
-
-#transactionsList .transaction-item.expense {
-    background-color: #f7ccd0;
+    .transaction-item-content {
+        width: 100%;
+        align-self: flex-start;
+    }
 }

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  color: #343A40;
 }
 
 html, body {
@@ -10,6 +11,10 @@ html, body {
   width: 100vw;
   overflow-y: hidden;
   overflow-x: hidden;
+}
+
+i.fas {
+  color: white;
 }
 
 /* Estilo do corpo da pagina */
@@ -50,6 +55,11 @@ aside {
   border-radius: 12px;
   display: flex;
   flex-direction: column;
+}
+
+#Sidebar a {
+  color: #fff;
+  text-decoration: none;
 }
 
 aside label {
