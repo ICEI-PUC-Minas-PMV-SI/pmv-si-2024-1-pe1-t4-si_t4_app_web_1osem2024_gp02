@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   window.addEventListener('click', function(event) {
-    if (window.innerWidth <= 768 && !sidebar.contains(event.target) && !menuButton.contains(event.target)) {
+    if (window.innerWidth <= 768 && sidebar && menuButton && !sidebar.contains(event.target) && !menuButton.contains(event.target)) {
       sidebar.style.display = 'none';
     }
   });

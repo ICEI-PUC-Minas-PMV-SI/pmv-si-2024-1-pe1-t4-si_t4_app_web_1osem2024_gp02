@@ -56,6 +56,11 @@
     padding-bottom: 40px;
 }
 
+.modal-actions {
+    display: flex;
+    gap: 8px;
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -119,12 +124,14 @@
 }
 
 .transaction-item-content {
+    overflow: hidden;
     display: flex;
     flex: 1;
     align-items: center;
 }
 
 .transaction-type-bg {
+    min-width: 36px;
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -149,8 +156,13 @@
     background: linear-gradient(225deg, rgba(233,30,99,1) 0%, rgba(131,17,56,1) 100%);
 }
 
+.transaction-item-desc-value {
+    overflow: hidden;
+}
+
 .transaction-date {
     margin-left: auto;
+    padding-left: 12px;
     color: #212529;
     font-weight: bold;
     opacity: 0.7;
@@ -161,6 +173,7 @@
     font-size: 12px;
     color: white;
     align-self: flex-start;
+    min-width: fit-content;
     margin-left: 8px;
     border-radius: 4px;
     padding: 3px 10px;
@@ -193,9 +206,7 @@
 
 .transaction-type,
 .transaction-description,
-.transaction-value,
-.transaction-date,
-.transaction-category {
+.transaction-value {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -215,6 +226,16 @@
 
 .transaction-actions button.remove {
     background-color: #f44336;
+    color: white;
+}
+
+.transaction-actions button.change-was-paid.paid {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.transaction-actions button.change-was-paid.unpaid {
+    background-color: var(--secondary-color);
     color: white;
 }
 
@@ -250,6 +271,10 @@
 
     .transaction-item-content {
         width: 100%;
+        align-self: flex-start;
+    }
+
+    .transaction-date {
         align-self: flex-start;
     }
 }
