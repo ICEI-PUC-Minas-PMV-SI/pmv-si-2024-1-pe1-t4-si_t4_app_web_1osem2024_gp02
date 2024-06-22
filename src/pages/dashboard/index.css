@@ -183,13 +183,6 @@
     background-color: #ccc;
 }
 
-.card-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    margin-top: 0px;
-}
-
 .overflow-x {
     overflow-x: auto;
 }

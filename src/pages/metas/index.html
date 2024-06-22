@@ -1,107 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Metas</title>
-    <link rel="stylesheet" href="/src/pages/Styles/dashboard/Dashboard.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/src/pages/Styles/dashboard/Dashboard.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
     />
-    <link rel="stylesheet" href="/src/pages/metas/style.css" />
+    <link rel="stylesheet" href="/src/pages/metas/style.css"/>
     <style>
-      .active-link{
-         background-color: green;
-      }
-     </style>
-  </head>
-  <body>
-    <div id="sidebarContainer" style="display: flex"></div>
-    <div class="page">
-      <div class="card relative">
+        .active-link {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="sidebarContainer" style="display: flex"></div>
+<div class="page">
+    <div class="card relative">
         <div class="header-row">
-          <h2>Metas de Despesas</h2>
+            <h2>Metas de despesas</h2>
+        </div>
+        <div id="monthYearWrapper">
+            <button onclick="changeMonthYear(-1)">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <span id="monthYear"></span>
+            <button onclick="changeMonthYear(1)">
+                <i class="fas fa-arrow-right"></i>
+            </button>
         </div>
         <div class="card-line relative">
-          <h3>Meta Total</h3>
-          <div class="text-right">
-            <span class="text-red">- R$ 100,00</span>
-            <span class="text-bold">R$ 2.300,00</span>
-          </div>
+            <span class="goal-card-title">Meta Total</span>
+            <div class="text-right">
+                <span class="text-red goal-card-current total">- R$ 100,00</span>
+                <span class="text-bold goal-card-goal total">R$ 2.300,00</span>
+            </div>
+            <button class="edit-goal" onclick="openEdit('total')">
+                <i class="fas fa-pen"></i>
+            </button>
         </div>
         <div class="header-row">
-          <h2>Por categoria:</h2>
+            <h2>Por categoria:</h2>
         </div>
-        <div class="card-line relative mb-10">
-          <div class="circle bg-red"></div>
-          <span class="text-bold">Mercado</span>
-          <div class="text-right">
-            <span class="text-red">- R$ 100,00</span>
-            <span class="text-bold">R$ 800,00</span>
-          </div>
-        </div>
-        <div class="card-line relative mb-10">
-          <div class="circle bg-yellow"></div>
-          <span class="text-bold">Lazer</span>
-          <div class="text-right">
-            <span class="text-green">+ R$ 100,00</span>
-            <span class="text-bold">R$ 800,00</span>
-          </div>
-        </div>
-        <div class="card-line relative mb-10">
-          <div class="circle bg-blue"></div>
-          <span class="text-bold">Saúde</span>
-          <div class="text-right">
-            <span class="text-green">+ R$ 100,00</span>
-            <span class="text-bold">R$ 900,00</span>
-          </div>
-        </div>
-        <div class="card-line relative mb-10">
-          <div class="circle bg-green"></div>
-          <span class="text-bold">Transporte</span>
-          <div class="text-right">
-            <span class="text-red">- R$ 67,00</span>
-            <span class="text-bold">R$ 250,00</span>
-          </div>
-        </div>
-        <div class="card-line relative mb-10">
-          <div class="circle bg-black"></div>
-          <span class="text-bold">Educação</span>
-          <div class="text-right">
-            <span class="text-green">+ R$ 30,00</span>
-            <span class="text-bold">R$ 100,00</span>
-          </div>
-        </div>
-        <div class="card-line relative mb-10">
-          <div class="circle bg-purple"></div>
-          <span class="text-bold">Casa</span>
-          <div class="text-right">
-            <span class="text-green">+ R$ 100,00</span>
-            <span class="text-bold">R$ 800,00</span>
-          </div>
-        </div>
-        <div class="card-line relative mb-10">
-          <div class="circle bg-blue"></div>
-          <span class="text-bold">Cuidados Pessoais</span>
-          <div class="text-right">
-            <span class="text-red">- R$ 22,00</span>
-            <span class="text-bold">R$ 51,00</span>
-          </div>
-        </div>
-        <div class="card-line relative mb-10">
-          <div class="circle bg-pink"></div>
-          <span class="text-bold">Viagem</span>
-          <div class="text-right">
-            <span class="text-green">+ R$ 100,00</span>
-            <span class="text-bold">R$ 300,00</span>
-          </div>
-        </div>
-      </div>
+        <div class="goal-categories-list"></div>
     </div>
-    <script src="/src/pages/Scripts/components/sidebar.js"></script>
-    <script src="/src/pages/Scripts/dashboard/menu.js"></script>
-  </body>
+</div>
+<div id="editGoal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeEdit()">&times;</span>
+        <h2>Editar Meta</h2>
+        <label for="editGoalInput">Nova meta</label>
+        <input id="editGoalInput" type="number"/>
+        <p id="removalConfirmationText"></p>
+        <button class="modal-button confirm" onclick="confirmEdit()">Confirmar</button>
+        <button class="modal-button close" onclick="closeEdit()">Cancelar</button>
+    </div>
+</div>
+<script src="/src/pages/Scripts/components/sidebar.js"></script>
+<script src="/src/pages/Scripts/dashboard/menu.js"></script>
+<script src="/src/pages/metas/metas.js"></script>
+</body>
 </html>

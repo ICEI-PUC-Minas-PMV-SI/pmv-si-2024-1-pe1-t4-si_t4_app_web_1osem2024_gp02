@@ -35,13 +35,13 @@ section {
 }
 
 .transacao-button.receita {
-    background: rgb(76,175,80);
-    background: linear-gradient(225deg, rgba(76,175,80,1) 0%, rgba(32,73,33,1) 100%);
+    background: rgb(76, 175, 80);
+    background: linear-gradient(225deg, rgba(76, 175, 80, 1) 0%, rgba(32, 73, 33, 1) 100%);
 }
 
 .transacao-button.despesa {
-    background: rgb(233,30,99);
-    background: linear-gradient(225deg, rgba(233,30,99,1) 0%, rgba(131,17,56,1) 100%);
+    background: rgb(233, 30, 99);
+    background: linear-gradient(225deg, rgba(233, 30, 99, 1) 0%, rgba(131, 17, 56, 1) 100%);
 }
 
 .transacao-button:hover {
@@ -77,12 +77,6 @@ section {
     color: var(--primary-color);
 }
 
-#monthYear {
-    width: 160px;
-    text-align: center;
-    font-weight: bold;
-}
-
 .transaction-alert {
     display: flex;
     align-items: center;
@@ -98,14 +92,20 @@ section {
     color: white;
 }
 
+#transactionAlerts {
+    margin-bottom: 8px;
+}
+
+#monthYear {
+    width: 160px;
+    text-align: center;
+    font-weight: bold;
+}
+
 #monthYearWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8px;
-}
-
-#transactionAlerts {
     margin-bottom: 8px;
 }
 
@@ -237,13 +237,13 @@ section {
 }
 
 .transaction-type-bg.income {
-    background: rgb(76,175,80);
-    background: linear-gradient(225deg, rgba(76,175,80,1) 0%, rgba(32,73,33,1) 100%);
+    background: rgb(76, 175, 80);
+    background: linear-gradient(225deg, rgba(76, 175, 80, 1) 0%, rgba(32, 73, 33, 1) 100%);
 }
 
 .transaction-type-bg.expense {
-    background: rgb(233,30,99);
-    background: linear-gradient(225deg, rgba(233,30,99,1) 0%, rgba(131,17,56,1) 100%);
+    background: rgb(233, 30, 99);
+    background: linear-gradient(225deg, rgba(233, 30, 99, 1) 0%, rgba(131, 17, 56, 1) 100%);
 }
 
 .transaction-item-desc-value {
@@ -290,10 +290,6 @@ section {
     display: flex;
     flex-direction: column;
 }
-
-#monthYearWrapper {}
-
-#monthYear {}
 
 #transactionsList .transaction-item.income {
     background-color: #cefcd9;
