@@ -1,233 +1,251 @@
 .header-row {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .date-row {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .date-row span {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .date-btn {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-    margin-bottom: -4px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: -4px;
 }
 
 .summary-cards {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 2px 10px;
-    gap: 12px;
-    overflow-x: auto;
-    overflow-y: visible;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 2px 10px;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: visible;
 }
 
 .summary-cards > .card {
-    flex: 1;
-    min-width: 200px;
-    max-width: 400px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
 }
 
 .chart-container {
-    justify-content: center;
-    width: min-content;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%; /* Ajusta a largura conforme necessário */
+  height: 400px; /* Altura fixa para todos os gráficos */
+  max-height: 600px; /* Altura máxima para evitar rolagem */
+}
+
+.charts {
+  max-width: 800px;
 }
 
 .text {
-    font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .text.center {
-    text-align: center;
+  text-align: center;
 }
 
 .text.light {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .text.extra-bold {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .text.right {
-    text-align: right;
+  text-align: right;
 }
 
 .text.md {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .text.sm {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .page {
-    flex-grow: 1;
-    overflow-x: hidden;
+  flex-grow: 1;
+  overflow-x: hidden;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 16px;
-    border-radius: 12px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
 }
 
 .icon-bg {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    left: 20px;
-    top: -40px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 20px;
+  top: -40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .summary-card-title {
-    font-size: 14px;
-    margin-top: 8px;
+  font-size: 14px;
+  margin-top: 8px;
 }
 
 .icon-bg.green {
-    background: rgb(76,175,80);
-    background: linear-gradient(225deg, rgba(76,175,80,1) 0%, rgba(32,73,33,1) 100%);
+  background: rgb(76, 175, 80);
+  background: linear-gradient(
+    225deg,
+    rgba(76, 175, 80, 1) 0%,
+    rgba(32, 73, 33, 1) 100%
+  );
 }
 
 .icon-bg.blue {
-    background: rgb(76,104,175);
-    background: linear-gradient(55deg, rgba(76,104,175,1) 0%, rgba(80,124,235,1) 100%);
+  background: rgb(76, 104, 175);
+  background: linear-gradient(
+    55deg,
+    rgba(76, 104, 175, 1) 0%,
+    rgba(80, 124, 235, 1) 100%
+  );
 }
 
 .icon-bg.orange {
-    background: rgb(211,114,84);
-    background: linear-gradient(14deg, rgba(211,114,84,1) 0%, rgba(221,215,84,1) 100%);
+  background: rgb(211, 114, 84);
+  background: linear-gradient(
+    14deg,
+    rgba(211, 114, 84, 1) 0%,
+    rgba(221, 215, 84, 1) 100%
+  );
 }
 
 .mt-4 {
-    margin-top: 4px;
+  margin-top: 4px;
 }
 
 .mt-24 {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .gap-8 {
-    gap: 8px;
+  gap: 8px;
 }
 
 .hor-chart-desc {
-    font-family: "Open Sans", sans-serif;
-    font-size: 12px;
-    font-weight: 300;
-    width: 60px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  width: 60px;
 }
 
 .chart-space {
-    position: relative;
-    height: 250px;
-    padding-left: 10px;
+  position: relative;
+  height: 250px;
+  padding-left: 10px;
 }
 
 .chart-space-positive {
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .vert-chart-bar {
-    width: 40px;
+  width: 40px;
 }
 
 .hor-chart-bar {
-    height: 40px;
+  height: 40px;
 }
 
 .items-center {
-    align-items: center;
+  align-items: center;
 }
 
 /* Temp */
 .incomings-chart-bar {
-    width: 80%;
+  width: 80%;
 }
 
 .expenses-chart-bar {
-    width: 70%;
+  width: 70%;
 }
 /* Temp */
 
 .zero-line-chart {
-    position: absolute;
-    top: 125px;
-    width: 100%;
-    height: 1px;
-    background-color: #ccc;
+  position: absolute;
+  top: 125px;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
 }
 
 .overflow-x {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 .w-full {
-    width: 100%;
+  width: 100%;
 }
 
 .chart-value {
-    font-size: 12px;
-    font-weight: 800;
-    left: 0;
-    right: 0;
-    text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .shrink-1 {
-    flex-shrink: 1;
+  flex-shrink: 1;
 }
 
 .flex-col {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .flex-1 {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .absolute {
-    position: absolute;
+  position: absolute;
 }
 
 .bg-info {
-    background-color: var(--info-color);
+  background-color: var(--info-color);
 }
 
 .bg-green {
-    background-color: var(--success-color);
+  background-color: var(--success-color);
 }
 
 .bg-primary {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }

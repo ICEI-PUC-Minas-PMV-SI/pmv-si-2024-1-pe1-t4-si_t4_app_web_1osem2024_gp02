@@ -1,380 +1,396 @@
 .actions-wrapper {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 header h2 {
-    margin: 0px;
+  margin: 0px;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .transacao-button {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
 }
 
 .transacao-button.receita {
-    background: rgb(76, 175, 80);
-    background: linear-gradient(225deg, rgba(76, 175, 80, 1) 0%, rgba(32, 73, 33, 1) 100%);
+  background: rgb(76, 175, 80);
+  background: linear-gradient(
+    225deg,
+    rgba(76, 175, 80, 1) 0%,
+    rgba(32, 73, 33, 1) 100%
+  );
 }
 
 .transacao-button.despesa {
-    background: rgb(233, 30, 99);
-    background: linear-gradient(225deg, rgba(233, 30, 99, 1) 0%, rgba(131, 17, 56, 1) 100%);
+  background: rgb(233, 30, 99);
+  background: linear-gradient(
+    225deg,
+    rgba(233, 30, 99, 1) 0%,
+    rgba(131, 17, 56, 1) 100%
+  );
 }
 
 .transacao-button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #resultWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    background-color: #E9ECEF;
-    border-radius: 8px;
-    align-self: flex-end;
-    align-items: flex-end;
-    padding: 8px;
-    width: 300px;
-    font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  align-self: flex-end;
+  align-items: flex-end;
+  padding: 8px;
+  width: 300px;
+  font-weight: bold;
 }
 
 #resultWrapper .total {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 #monthResult {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 #monthResult.positive {
-    color: var(--success-color);
+  color: var(--success-color);
 }
 
 #monthResult.negative {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .transaction-alert {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    background-color: var(--primary-color);
-    border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
 }
 
 .transaction-alert span {
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
 }
 
 #transactionAlerts {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 #monthYear {
-    width: 160px;
-    text-align: center;
-    font-weight: bold;
+  width: 160px;
+  text-align: center;
+  font-weight: bold;
 }
 
 #monthYearWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 #monthYearWrapper button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 #monthYearWrapper button i {
-    color: #42424a;
+  color: #42424a;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 90%;
-    max-width: 350px;
-    padding-bottom: 40px;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 350px;
+  padding-bottom: 40px;
 }
 
 .modal-actions {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .modal-button {
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-top: 20px;
 }
 
 .modal-button.close {
-    background-color: #6c757d;
+  background-color: #6c757d;
 }
 
 .modal-button.close:hover {
-    background-color: #5a6268;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #5a6268;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .modal-button.add,
 .modal-button.confirm,
 .modal-button.save {
-    background-color: #28a745;
+  background-color: #28a745;
 }
 
 .modal-button.add:hover,
 .modal-button.confirm:hover,
 .modal-button.save:hover {
-    background-color: #218838;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .transaction-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 8px;
-    gap: 12px;
-    padding: 10px;
-    margin-bottom: 10px;
-    transition: background-color 0.2s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+  gap: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .transaction-item-content {
-    overflow: hidden;
-    display: flex;
-    flex: 1;
-    align-items: center;
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
 .transaction-type-bg {
-    min-width: 36px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 8px;
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
 }
 
 .transaction-type-bg i {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .transaction-type-bg.income {
-    background: rgb(76, 175, 80);
-    background: linear-gradient(225deg, rgba(76, 175, 80, 1) 0%, rgba(32, 73, 33, 1) 100%);
+  background: rgb(76, 175, 80);
+  background: linear-gradient(
+    225deg,
+    rgba(76, 175, 80, 1) 0%,
+    rgba(32, 73, 33, 1) 100%
+  );
 }
 
 .transaction-type-bg.expense {
-    background: rgb(233, 30, 99);
-    background: linear-gradient(225deg, rgba(233, 30, 99, 1) 0%, rgba(131, 17, 56, 1) 100%);
+  background: rgb(233, 30, 99);
+  background: linear-gradient(
+    225deg,
+    rgba(233, 30, 99, 1) 0%,
+    rgba(131, 17, 56, 1) 100%
+  );
 }
 
 .transaction-item-desc-value {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .transaction-date {
-    margin-left: auto;
-    padding-left: 12px;
-    color: #212529;
-    font-weight: bold;
-    opacity: 0.7;
+  margin-left: auto;
+  padding-left: 12px;
+  color: #212529;
+  font-weight: bold;
+  opacity: 0.7;
 }
 
 .transaction-category {
-    font-weight: bold;
-    font-size: 12px;
-    color: white;
-    align-self: flex-start;
-    min-width: fit-content;
-    margin-left: 8px;
-    border-radius: 4px;
-    padding: 3px 10px;
-    background-color: #03A9F4;
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  align-self: flex-start;
+  min-width: fit-content;
+  margin-left: 8px;
+  border-radius: 4px;
+  padding: 3px 10px;
+  background-color: #03a9f4;
 }
 
 .transaction-description {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .transaction-value {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .transaction-value.expense {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .transaction-value.income {
-    color: var(--success-color);
+  color: var(--success-color);
 }
 
 #transactionAlerts {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #transactionsList .transaction-item.income {
-    background-color: #cefcd9;
+  background-color: #cefcd9;
 }
 
 #transactionsList .transaction-item.expense {
-    background-color: #f7ccd0;
+  background-color: #f7ccd0;
 }
 
 .transaction-type,
 .transaction-description,
 .transaction-value {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .transaction-actions {
-    display: flex;
-    justify-content: flex-end;
-    height: 40px;
-    gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+  gap: 10px;
 }
 
 .transaction-actions button.edit {
-    background-color: #2196F3;
-    color: white;
+  background-color: #2196f3;
+  color: white;
 }
 
 .transaction-actions button.remove {
-    background-color: #f44336;
-    color: white;
+  background-color: #f44336;
+  color: white;
 }
 
 .transaction-actions button.change-was-paid.paid {
-    background-color: var(--success-color);
-    color: white;
+  background-color: var(--success-color);
+  color: white;
 }
 
 .transaction-actions button.change-was-paid.unpaid {
-    background-color: var(--secondary-color);
-    color: white;
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 .transaction-actions button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 16px;
-    font-size: 14px;
-    width: 50px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    text-transform: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  width: 50px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-transform: none;
 }
 
 .transaction-actions button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .transaction-actions button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 600px) {
-    .transaction-item {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 0px;
-    }
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0px;
+  }
 
-    .transaction-item-content {
-        width: 100%;
-        align-self: flex-start;
-    }
+  .transaction-item-content {
+    width: 100%;
+    align-self: flex-start;
+  }
 
-    .transaction-date {
-        align-self: flex-start;
-    }
+  .transaction-date {
+    align-self: flex-start;
+  }
 
-    header {
-        flex-direction: column;
-        gap: 0px;
-    }
+  header {
+    flex-direction: column;
+    gap: 0px;
+  }
 }
