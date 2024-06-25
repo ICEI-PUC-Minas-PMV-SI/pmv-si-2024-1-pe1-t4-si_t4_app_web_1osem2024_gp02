@@ -1,8 +1,9 @@
 # Plano de Testes de Usabilidade
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+## Testes
 
-Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar.
-
-> **Links Úteis**:
-> - [Ferramentas deTestes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+1. O sistema deve ser responsivo
+2. O sistema deve alertar sobre valores inválidos
+3. O sistema deve possuir formas de mostrar as transações de forma mais concisa
+4. O sistema deve usar das cores para destacar informações importantes
+5. O sistema deve prevenir operações acidentais

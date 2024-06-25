@@ -1,81 +1,88 @@
 * {
-  box-sizing: border-box;
-  color: #343A40;
+    box-sizing: border-box;
+    color: #343A40;
 }
 
 html, body {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow-y: hidden;
-  overflow-x: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 i.fas {
-  color: white;
+    color: white;
 }
 
 /* Estilo do corpo da pagina */
 body {
-  padding: 10px;
-  background-color: #e9ecef;
-  font-family: "Open Sans", sans-serif;
-  display: flex;
+    padding: 10px;
+    background-color: #e9ecef;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
 }
 
 /* Estilos para o conteúdo principal */
 main {
-  flex: 1;
-  max-width: 100%;
-  padding: 20px;
-  overflow: hidden;
-  background-color: #ffff;
-  border-radius: 12px;
-  filter: drop-shadow(rgba(0, 0, 0, 0.09) 1rem 1rem 4px);
+    flex: 1;
+    max-width: 100%;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #ffff;
+    border-radius: 12px;
+    filter: drop-shadow(rgba(0, 0, 0, 0.09) 1rem 1rem 4px);
 }
 
 main header {
-  gap: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-main header .menu {
-  display: none;
+body .menu {
+    display: none;
+    border: none;
+    outline: none;
 }
 
 /* Estilos para a barra lateral */
 aside {
-  width: 250px;
-  margin-right: 20px;
-  color: #ffff;
-  background: linear-gradient(#42424a, #191919);
-  padding: 10px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
+    width: 250px;
+    margin-right: 20px;
+    color: #ffff;
+    background: linear-gradient(#42424a, #191919);
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+#Sidebar {
+    top: 12px;
+    bottom: 12px;
 }
 
 #Sidebar a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 #Sidebar h3 {
-  color: #fff;
+    color: #fff;
 }
 
 aside label {
-  gap: 10px;
-  display: flex;
-  align-items: center;
+    gap: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .relative {
-  position: relative;
+    position: relative;
 }
 
 .invert-x {
@@ -83,111 +90,126 @@ aside label {
 }
 
 .h-divider {
-  width: calc(100% + 20px);
-  margin-left: -10px;
-  border-bottom: 1px solid #ccc;
-  opacity: 0.5;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    border-bottom: 1px solid #ccc;
+    opacity: 0.5;
 }
 
 /* Estilos para a lista de botões */
 .button-list {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 .button-list li {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .sidebar__icon-wrapper {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar__logout-a {
-  margin-top: auto;
+    margin-top: auto;
 }
 
 .button-list li button {
-  width: 100%;
-  padding: 10px;
-  gap: 5px;
-  border: none;
-  background-color: #08080800;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 5px;
+    border: none;
+    background-color: #08080800;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .button-list li button:hover {
-  background-color: #08080850;
+    background-color: #08080850;
 }
 
 /* Estilos específicos para o botão Selecionado */
 .button-list .green-button {
-  background-color: #4caf50;
-  color: #fff;
+    background-color: #4caf50;
+    color: #fff;
 }
 
 .button-list .green-button:hover {
-  background-color: #388e3c;
+    background-color: #388e3c;
 }
 
 .exit-button {
-  margin-top: auto;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background-color: #dc3545;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+    margin-top: auto;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
 }
 
 .exit-button:hover {
-  background-color: #bd2130;
+    background-color: #bd2130;
 }
 
 /* Estilos para telas menores (mobile) */
 @media screen and (max-width: 768px) {
-  aside {
-    position: fixed;
-    display: none;
-    z-index: 1;
-  }
+    aside {
+        position: fixed;
+        display: none;
+        z-index: 1;
+    }
 
-  main {
-    flex: 1; /* Expandindo o conteúdo principal para ocupar todo o espaço disponível :D */
-  }
+    main {
+        flex: 1; /* Expandindo o conteúdo principal para ocupar todo o espaço disponível :D */
+    }
 
-  main header .menu {
-    display: flex;
-    border: none;
-    background-color: #ffffff00;
-  }
+    body .menu {
+        display: flex;
+        border: none;
+        background-color: #ffffff00;
+        align-self: flex-end;
+    }
+
+    #sidebarContainer {
+        flex-direction: column;
+    }
+
+    aside.visible {
+        display: flex;
+    }
+
+    body {
+        flex-direction: column;
+        display: flex;
+        gap: 12px;
+    }
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 input[type="text"], input[type="number"], input[type="date"], select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    box-sizing: border-box;
 }
 
 :root {
-  --primary-color: #E91E63;
-  --success-color: #4CAF50;
-  --secondary-color: #7B809A;
-  --info-color: #03A9F4;
+    --primary-color: #E91E63;
+    --success-color: #4CAF50;
+    --secondary-color: #7B809A;
+    --info-color: #03A9F4;
 }
